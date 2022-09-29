@@ -1,10 +1,7 @@
 package experiment_abstract;
 
 abstract class Question {
-	private String Question;
-	private String[] AnswerChoices;
-	private int maxSelectable;
-	
+	private String Question;	
 	public void setQuestion(String x)
 	{
 		x = this.Question;
@@ -14,15 +11,8 @@ abstract class Question {
 		return this.Question;
 	}
 	
-	public int getMaxSelectable()
-	{
-		return this.maxSelectable;
-	}
-	public String[] getAnsChoices()
-	{
-		return this.AnswerChoices;
-	}
-	
+	abstract int getMaxSelectable();
+	abstract String[] getAnsChoices();
 	abstract int setAnsChoices(String[] x);
 	
 }

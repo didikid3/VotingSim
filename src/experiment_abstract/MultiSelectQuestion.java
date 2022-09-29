@@ -1,7 +1,6 @@
 package experiment_abstract;
 
 public class MultiSelectQuestion extends Question {
-	private String Question;
 	private String[] AnswerChoices;
 	private int maxSelectable;
 	
