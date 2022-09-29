@@ -1,4 +1,4 @@
-package experiment_composition;
+package experiment_abstract;
 
 import java.util.HashMap;
 public class VotingBooth {
@@ -30,6 +30,7 @@ public class VotingBooth {
 	}
 	
 	public void acceptAns(Student x, int[] ans) {
+		
 		if( ans.length > this.maxSelectable) {
 			System.out.println("Too Many Choices Selected!");
 		}
