@@ -15,6 +15,9 @@ public class Driver {
  
         return test;
     }
+	
+	//Assuming this is a voting booth.
+	//Meaning there is no "right" answer
 	public static void main(String[] args) {
 		int studentCount = (int)(Math.random() * 20) + 1;
 		int questionType = (int)(Math.random() * 2) + 1;
@@ -56,6 +59,7 @@ public class Driver {
 		int studentChosen;
 		int choice;
 		
+		//For each randomly generated student, generate answers
 		for(int i = 0; i < studentCount; i++) {
 			Student x = new Student();
 			x.setID(String.valueOf(i));
@@ -63,6 +67,7 @@ public class Driver {
 			studentChosen = (int)(Math.random() * maxChoices) + 1;
 			studentAnswer = new int[studentChosen];
 			
+			//Set amount of answers
 			for(int k = 0; k < studentChosen; k++) {
 				if(maxChoices > 1) {
 					choice  = (int)(Math.random() * maxChoices);

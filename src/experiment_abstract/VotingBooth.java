@@ -18,6 +18,7 @@ public class VotingBooth {
 		this.ansChoiceResults = new int[this.boothQuestion.getAnsChoices().length];
 	}
 	
+	//If a student reanswers, we need to remove it's previous data
 	private void removeOldAns(String id) {
 		for(int i = 0; i < this.studentAns.get(id).length; i ++) {
 			this.ansChoiceResults[ this.studentAns.get(id)[i] ] --;
@@ -29,6 +30,7 @@ public class VotingBooth {
 		}
 	}
 	
+	//Check if a response to a question is valid
 	public void acceptAns(Student x, int[] ans) {
 		
 		if( ans.length > this.maxSelectable) {
